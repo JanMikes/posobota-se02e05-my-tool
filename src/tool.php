@@ -8,7 +8,7 @@ if ($cwd === false) {
     throw new \RuntimeException('Something horribly went wrong!');
 }
 
-$finder = \Nette\Utils\Finder::findFiles('*.php')->in($cwd);
+$finder = \Nette\Utils\Finder::findFiles('*.php')->from($cwd);
 
 $words = [
     'drugs' => 'Nette'
@@ -23,7 +23,7 @@ foreach ($finder->getIterator() as $file) {
                 $foundSomethingBad = true;
 
                 echo sprintf(
-                    "Forbidden word '%s' detected (%s:%d):\n%s\nDid you instead mean: '%s'?\n\n",
+                    "Forbidden word '%s' detected (%s:%d):\n- %s\n+ %s\n\n",
                     $forbiddenWord,
                     (string) $file,
                     (int) $lineNumber +1,
