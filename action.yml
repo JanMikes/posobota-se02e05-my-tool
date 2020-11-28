@@ -1,3 +1,4 @@
+# action.yml
 name: "Don't do drugs"
 description: "Sample of Github action that runs \"Don't do drugs\" tool"
 runs:
