@@ -1,0 +1,12 @@
+{
+    "name": "janmikes/posobota-se02e05-my-tool",
+    "require": {
+        "nette/finder": "^2.5"
+    },
+    "authors": [
+        {
+            "name": "Jan Mikeš",
+            "email": "j.mikes@me.com"
+        }
+    ]
+}
